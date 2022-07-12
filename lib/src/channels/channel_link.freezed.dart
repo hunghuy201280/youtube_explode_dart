@@ -12,23 +12,7 @@ part of 'channel_link.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ChannelLinkTearOff {
-  const _$ChannelLinkTearOff();
-
-  _ChannelLink call(String title, Uri url, Uri icon) {
-    return _ChannelLink(
-      title,
-      url,
-      icon,
-    );
-  }
-}
-
-/// @nodoc
-const $ChannelLink = _$ChannelLinkTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ChannelLink {
@@ -87,24 +71,24 @@ class _$ChannelLinkCopyWithImpl<$Res> implements $ChannelLinkCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ChannelLinkCopyWith<$Res>
+abstract class _$$_ChannelLinkCopyWith<$Res>
     implements $ChannelLinkCopyWith<$Res> {
-  factory _$ChannelLinkCopyWith(
-          _ChannelLink value, $Res Function(_ChannelLink) then) =
-      __$ChannelLinkCopyWithImpl<$Res>;
+  factory _$$_ChannelLinkCopyWith(
+          _$_ChannelLink value, $Res Function(_$_ChannelLink) then) =
+      __$$_ChannelLinkCopyWithImpl<$Res>;
   @override
   $Res call({String title, Uri url, Uri icon});
 }
 
 /// @nodoc
-class __$ChannelLinkCopyWithImpl<$Res> extends _$ChannelLinkCopyWithImpl<$Res>
-    implements _$ChannelLinkCopyWith<$Res> {
-  __$ChannelLinkCopyWithImpl(
-      _ChannelLink _value, $Res Function(_ChannelLink) _then)
-      : super(_value, (v) => _then(v as _ChannelLink));
+class __$$_ChannelLinkCopyWithImpl<$Res> extends _$ChannelLinkCopyWithImpl<$Res>
+    implements _$$_ChannelLinkCopyWith<$Res> {
+  __$$_ChannelLinkCopyWithImpl(
+      _$_ChannelLink _value, $Res Function(_$_ChannelLink) _then)
+      : super(_value, (v) => _then(v as _$_ChannelLink));
 
   @override
-  _ChannelLink get _value => super._value as _ChannelLink;
+  _$_ChannelLink get _value => super._value as _$_ChannelLink;
 
   @override
   $Res call({
@@ -112,7 +96,7 @@ class __$ChannelLinkCopyWithImpl<$Res> extends _$ChannelLinkCopyWithImpl<$Res>
     Object? url = freezed,
     Object? icon = freezed,
   }) {
-    return _then(_ChannelLink(
+    return _then(_$_ChannelLink(
       title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -134,18 +118,17 @@ class __$ChannelLinkCopyWithImpl<$Res> extends _$ChannelLinkCopyWithImpl<$Res>
 class _$_ChannelLink implements _ChannelLink {
   const _$_ChannelLink(this.title, this.url, this.icon);
 
-  @override
-
   /// Link title.
-  final String title;
   @override
+  final String title;
 
   /// Link URL.
   /// Already decoded with the YouTube shortener already taken out.
-  final Uri url;
   @override
+  final Uri url;
 
   /// Link Icon URL.
+  @override
   final Uri icon;
 
   @override
@@ -157,7 +140,7 @@ class _$_ChannelLink implements _ChannelLink {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ChannelLink &&
+            other is _$_ChannelLink &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.icon, icon));
@@ -172,12 +155,13 @@ class _$_ChannelLink implements _ChannelLink {
 
   @JsonKey(ignore: true)
   @override
-  _$ChannelLinkCopyWith<_ChannelLink> get copyWith =>
-      __$ChannelLinkCopyWithImpl<_ChannelLink>(this, _$identity);
+  _$$_ChannelLinkCopyWith<_$_ChannelLink> get copyWith =>
+      __$$_ChannelLinkCopyWithImpl<_$_ChannelLink>(this, _$identity);
 }
 
 abstract class _ChannelLink implements ChannelLink {
-  const factory _ChannelLink(String title, Uri url, Uri icon) = _$_ChannelLink;
+  const factory _ChannelLink(
+      final String title, final Uri url, final Uri icon) = _$_ChannelLink;
 
   @override
 
@@ -194,6 +178,6 @@ abstract class _ChannelLink implements ChannelLink {
   Uri get icon;
   @override
   @JsonKey(ignore: true)
-  _$ChannelLinkCopyWith<_ChannelLink> get copyWith =>
+  _$$_ChannelLinkCopyWith<_$_ChannelLink> get copyWith =>
       throw _privateConstructorUsedError;
 }

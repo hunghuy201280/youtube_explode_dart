@@ -12,25 +12,7 @@ part of 'search_playlist.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SearchPlaylistTearOff {
-  const _$SearchPlaylistTearOff();
-
-  _SearchPlaylist call(PlaylistId playlistId, String playlistTitle,
-      int playlistVideoCount, List<Thumbnail> thumbnails) {
-    return _SearchPlaylist(
-      playlistId,
-      playlistTitle,
-      playlistVideoCount,
-      thumbnails,
-    );
-  }
-}
-
-/// @nodoc
-const $SearchPlaylist = _$SearchPlaylistTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SearchPlaylist {
@@ -110,11 +92,11 @@ class _$SearchPlaylistCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SearchPlaylistCopyWith<$Res>
+abstract class _$$_SearchPlaylistCopyWith<$Res>
     implements $SearchPlaylistCopyWith<$Res> {
-  factory _$SearchPlaylistCopyWith(
-          _SearchPlaylist value, $Res Function(_SearchPlaylist) then) =
-      __$SearchPlaylistCopyWithImpl<$Res>;
+  factory _$$_SearchPlaylistCopyWith(
+          _$_SearchPlaylist value, $Res Function(_$_SearchPlaylist) then) =
+      __$$_SearchPlaylistCopyWithImpl<$Res>;
   @override
   $Res call(
       {PlaylistId playlistId,
@@ -127,15 +109,15 @@ abstract class _$SearchPlaylistCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchPlaylistCopyWithImpl<$Res>
+class __$$_SearchPlaylistCopyWithImpl<$Res>
     extends _$SearchPlaylistCopyWithImpl<$Res>
-    implements _$SearchPlaylistCopyWith<$Res> {
-  __$SearchPlaylistCopyWithImpl(
-      _SearchPlaylist _value, $Res Function(_SearchPlaylist) _then)
-      : super(_value, (v) => _then(v as _SearchPlaylist));
+    implements _$$_SearchPlaylistCopyWith<$Res> {
+  __$$_SearchPlaylistCopyWithImpl(
+      _$_SearchPlaylist _value, $Res Function(_$_SearchPlaylist) _then)
+      : super(_value, (v) => _then(v as _$_SearchPlaylist));
 
   @override
-  _SearchPlaylist get _value => super._value as _SearchPlaylist;
+  _$_SearchPlaylist get _value => super._value as _$_SearchPlaylist;
 
   @override
   $Res call({
@@ -144,7 +126,7 @@ class __$SearchPlaylistCopyWithImpl<$Res>
     Object? playlistVideoCount = freezed,
     Object? thumbnails = freezed,
   }) {
-    return _then(_SearchPlaylist(
+    return _then(_$_SearchPlaylist(
       playlistId == freezed
           ? _value.playlistId
           : playlistId // ignore: cast_nullable_to_non_nullable
@@ -158,7 +140,7 @@ class __$SearchPlaylistCopyWithImpl<$Res>
           : playlistVideoCount // ignore: cast_nullable_to_non_nullable
               as int,
       thumbnails == freezed
-          ? _value.thumbnails
+          ? _value._thumbnails
           : thumbnails // ignore: cast_nullable_to_non_nullable
               as List<Thumbnail>,
     ));
@@ -169,24 +151,30 @@ class __$SearchPlaylistCopyWithImpl<$Res>
 
 class _$_SearchPlaylist implements _SearchPlaylist {
   const _$_SearchPlaylist(this.playlistId, this.playlistTitle,
-      this.playlistVideoCount, this.thumbnails);
-
-  @override
+      this.playlistVideoCount, final List<Thumbnail> thumbnails)
+      : _thumbnails = thumbnails;
 
   /// PlaylistId.
-  final PlaylistId playlistId;
   @override
+  final PlaylistId playlistId;
 
   /// Playlist title.
-  final String playlistTitle;
   @override
+  final String playlistTitle;
 
   /// Playlist video count, cannot be greater than 50.
-  final int playlistVideoCount;
   @override
+  final int playlistVideoCount;
 
   /// Video thumbnail
-  final List<Thumbnail> thumbnails;
+  final List<Thumbnail> _thumbnails;
+
+  /// Video thumbnail
+  @override
+  List<Thumbnail> get thumbnails {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_thumbnails);
+  }
 
   @override
   String toString() {
@@ -197,7 +185,7 @@ class _$_SearchPlaylist implements _SearchPlaylist {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SearchPlaylist &&
+            other is _$_SearchPlaylist &&
             const DeepCollectionEquality()
                 .equals(other.playlistId, playlistId) &&
             const DeepCollectionEquality()
@@ -205,7 +193,7 @@ class _$_SearchPlaylist implements _SearchPlaylist {
             const DeepCollectionEquality()
                 .equals(other.playlistVideoCount, playlistVideoCount) &&
             const DeepCollectionEquality()
-                .equals(other.thumbnails, thumbnails));
+                .equals(other._thumbnails, _thumbnails));
   }
 
   @override
@@ -214,17 +202,20 @@ class _$_SearchPlaylist implements _SearchPlaylist {
       const DeepCollectionEquality().hash(playlistId),
       const DeepCollectionEquality().hash(playlistTitle),
       const DeepCollectionEquality().hash(playlistVideoCount),
-      const DeepCollectionEquality().hash(thumbnails));
+      const DeepCollectionEquality().hash(_thumbnails));
 
   @JsonKey(ignore: true)
   @override
-  _$SearchPlaylistCopyWith<_SearchPlaylist> get copyWith =>
-      __$SearchPlaylistCopyWithImpl<_SearchPlaylist>(this, _$identity);
+  _$$_SearchPlaylistCopyWith<_$_SearchPlaylist> get copyWith =>
+      __$$_SearchPlaylistCopyWithImpl<_$_SearchPlaylist>(this, _$identity);
 }
 
 abstract class _SearchPlaylist implements SearchPlaylist {
-  const factory _SearchPlaylist(PlaylistId playlistId, String playlistTitle,
-      int playlistVideoCount, List<Thumbnail> thumbnails) = _$_SearchPlaylist;
+  const factory _SearchPlaylist(
+      final PlaylistId playlistId,
+      final String playlistTitle,
+      final int playlistVideoCount,
+      final List<Thumbnail> thumbnails) = _$_SearchPlaylist;
 
   @override
 
@@ -244,6 +235,6 @@ abstract class _SearchPlaylist implements SearchPlaylist {
   List<Thumbnail> get thumbnails;
   @override
   @JsonKey(ignore: true)
-  _$SearchPlaylistCopyWith<_SearchPlaylist> get copyWith =>
+  _$$_SearchPlaylistCopyWith<_$_SearchPlaylist> get copyWith =>
       throw _privateConstructorUsedError;
 }

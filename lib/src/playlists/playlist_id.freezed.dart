@@ -12,21 +12,7 @@ part of 'playlist_id.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PlaylistIdTearOff {
-  const _$PlaylistIdTearOff();
-
-  _PlaylistId _internal(String value) {
-    return _PlaylistId(
-      value,
-    );
-  }
-}
-
-/// @nodoc
-const $PlaylistId = _$PlaylistIdTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$PlaylistId {
@@ -68,29 +54,30 @@ class _$PlaylistIdCopyWithImpl<$Res> implements $PlaylistIdCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PlaylistIdCopyWith<$Res> implements $PlaylistIdCopyWith<$Res> {
-  factory _$PlaylistIdCopyWith(
-          _PlaylistId value, $Res Function(_PlaylistId) then) =
-      __$PlaylistIdCopyWithImpl<$Res>;
+abstract class _$$_PlaylistIdCopyWith<$Res>
+    implements $PlaylistIdCopyWith<$Res> {
+  factory _$$_PlaylistIdCopyWith(
+          _$_PlaylistId value, $Res Function(_$_PlaylistId) then) =
+      __$$_PlaylistIdCopyWithImpl<$Res>;
   @override
   $Res call({String value});
 }
 
 /// @nodoc
-class __$PlaylistIdCopyWithImpl<$Res> extends _$PlaylistIdCopyWithImpl<$Res>
-    implements _$PlaylistIdCopyWith<$Res> {
-  __$PlaylistIdCopyWithImpl(
-      _PlaylistId _value, $Res Function(_PlaylistId) _then)
-      : super(_value, (v) => _then(v as _PlaylistId));
+class __$$_PlaylistIdCopyWithImpl<$Res> extends _$PlaylistIdCopyWithImpl<$Res>
+    implements _$$_PlaylistIdCopyWith<$Res> {
+  __$$_PlaylistIdCopyWithImpl(
+      _$_PlaylistId _value, $Res Function(_$_PlaylistId) _then)
+      : super(_value, (v) => _then(v as _$_PlaylistId));
 
   @override
-  _PlaylistId get _value => super._value as _PlaylistId;
+  _$_PlaylistId get _value => super._value as _$_PlaylistId;
 
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_PlaylistId(
+    return _then(_$_PlaylistId(
       value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -104,16 +91,15 @@ class __$PlaylistIdCopyWithImpl<$Res> extends _$PlaylistIdCopyWithImpl<$Res>
 class _$_PlaylistId extends _PlaylistId {
   const _$_PlaylistId(this.value) : super._();
 
-  @override
-
   /// The playlist id as string.
+  @override
   final String value;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PlaylistId &&
+            other is _$_PlaylistId &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -123,12 +109,12 @@ class _$_PlaylistId extends _PlaylistId {
 
   @JsonKey(ignore: true)
   @override
-  _$PlaylistIdCopyWith<_PlaylistId> get copyWith =>
-      __$PlaylistIdCopyWithImpl<_PlaylistId>(this, _$identity);
+  _$$_PlaylistIdCopyWith<_$_PlaylistId> get copyWith =>
+      __$$_PlaylistIdCopyWithImpl<_$_PlaylistId>(this, _$identity);
 }
 
 abstract class _PlaylistId extends PlaylistId {
-  const factory _PlaylistId(String value) = _$_PlaylistId;
+  const factory _PlaylistId(final String value) = _$_PlaylistId;
   const _PlaylistId._() : super._();
 
   @override
@@ -137,6 +123,6 @@ abstract class _PlaylistId extends PlaylistId {
   String get value;
   @override
   @JsonKey(ignore: true)
-  _$PlaylistIdCopyWith<_PlaylistId> get copyWith =>
+  _$$_PlaylistIdCopyWith<_$_PlaylistId> get copyWith =>
       throw _privateConstructorUsedError;
 }

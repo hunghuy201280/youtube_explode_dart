@@ -12,40 +12,7 @@ part of 'search_video.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SearchVideoTearOff {
-  const _$SearchVideoTearOff();
-
-  _SearchVideo call(
-      VideoId id,
-      String title,
-      String author,
-      String description,
-      String duration,
-      int viewCount,
-      List<Thumbnail> thumbnails,
-      String? uploadDate,
-      bool isLive,
-      String channelId) {
-    return _SearchVideo(
-      id,
-      title,
-      author,
-      description,
-      duration,
-      viewCount,
-      thumbnails,
-      uploadDate,
-      isLive,
-      channelId,
-    );
-  }
-}
-
-/// @nodoc
-const $SearchVideo = _$SearchVideoTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SearchVideo {
@@ -179,11 +146,11 @@ class _$SearchVideoCopyWithImpl<$Res> implements $SearchVideoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SearchVideoCopyWith<$Res>
+abstract class _$$_SearchVideoCopyWith<$Res>
     implements $SearchVideoCopyWith<$Res> {
-  factory _$SearchVideoCopyWith(
-          _SearchVideo value, $Res Function(_SearchVideo) then) =
-      __$SearchVideoCopyWithImpl<$Res>;
+  factory _$$_SearchVideoCopyWith(
+          _$_SearchVideo value, $Res Function(_$_SearchVideo) then) =
+      __$$_SearchVideoCopyWithImpl<$Res>;
   @override
   $Res call(
       {VideoId id,
@@ -202,14 +169,14 @@ abstract class _$SearchVideoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchVideoCopyWithImpl<$Res> extends _$SearchVideoCopyWithImpl<$Res>
-    implements _$SearchVideoCopyWith<$Res> {
-  __$SearchVideoCopyWithImpl(
-      _SearchVideo _value, $Res Function(_SearchVideo) _then)
-      : super(_value, (v) => _then(v as _SearchVideo));
+class __$$_SearchVideoCopyWithImpl<$Res> extends _$SearchVideoCopyWithImpl<$Res>
+    implements _$$_SearchVideoCopyWith<$Res> {
+  __$$_SearchVideoCopyWithImpl(
+      _$_SearchVideo _value, $Res Function(_$_SearchVideo) _then)
+      : super(_value, (v) => _then(v as _$_SearchVideo));
 
   @override
-  _SearchVideo get _value => super._value as _SearchVideo;
+  _$_SearchVideo get _value => super._value as _$_SearchVideo;
 
   @override
   $Res call({
@@ -224,7 +191,7 @@ class __$SearchVideoCopyWithImpl<$Res> extends _$SearchVideoCopyWithImpl<$Res>
     Object? isLive = freezed,
     Object? channelId = freezed,
   }) {
-    return _then(_SearchVideo(
+    return _then(_$_SearchVideo(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -250,7 +217,7 @@ class __$SearchVideoCopyWithImpl<$Res> extends _$SearchVideoCopyWithImpl<$Res>
           : viewCount // ignore: cast_nullable_to_non_nullable
               as int,
       thumbnails == freezed
-          ? _value.thumbnails
+          ? _value._thumbnails
           : thumbnails // ignore: cast_nullable_to_non_nullable
               as List<Thumbnail>,
       uploadDate == freezed
@@ -279,51 +246,57 @@ class _$_SearchVideo implements _SearchVideo {
       this.description,
       this.duration,
       this.viewCount,
-      this.thumbnails,
+      final List<Thumbnail> thumbnails,
       this.uploadDate,
       this.isLive,
-      this.channelId);
-
-  @override
+      this.channelId)
+      : _thumbnails = thumbnails;
 
   /// Video ID.
-  final VideoId id;
   @override
+  final VideoId id;
 
   /// Video title.
-  final String title;
   @override
+  final String title;
 
   /// Video author.
-  final String author;
   @override
+  final String author;
 
   /// Video description snippet. (Part of the full description if too long)
-  final String description;
   @override
+  final String description;
 
   /// Video duration as String, HH:MM:SS
-  final String duration;
   @override
+  final String duration;
 
   /// Video View Count
-  final int viewCount;
   @override
+  final int viewCount;
 
   /// Video thumbnail
-  final List<Thumbnail> thumbnails;
+  final List<Thumbnail> _thumbnails;
+
+  /// Video thumbnail
   @override
+  List<Thumbnail> get thumbnails {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_thumbnails);
+  }
 
   /// Video upload date - As string: 5 years ago.
-  final String? uploadDate;
   @override
+  final String? uploadDate;
 
   /// True if this video is a live stream.
 // ignore: avoid_positional_boolean_parameters
-  final bool isLive;
   @override
+  final bool isLive;
 
   /// Channel id
+  @override
   final String channelId;
 
   @override
@@ -335,7 +308,7 @@ class _$_SearchVideo implements _SearchVideo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SearchVideo &&
+            other is _$_SearchVideo &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.author, author) &&
@@ -344,7 +317,7 @@ class _$_SearchVideo implements _SearchVideo {
             const DeepCollectionEquality().equals(other.duration, duration) &&
             const DeepCollectionEquality().equals(other.viewCount, viewCount) &&
             const DeepCollectionEquality()
-                .equals(other.thumbnails, thumbnails) &&
+                .equals(other._thumbnails, _thumbnails) &&
             const DeepCollectionEquality()
                 .equals(other.uploadDate, uploadDate) &&
             const DeepCollectionEquality().equals(other.isLive, isLive) &&
@@ -360,29 +333,29 @@ class _$_SearchVideo implements _SearchVideo {
       const DeepCollectionEquality().hash(description),
       const DeepCollectionEquality().hash(duration),
       const DeepCollectionEquality().hash(viewCount),
-      const DeepCollectionEquality().hash(thumbnails),
+      const DeepCollectionEquality().hash(_thumbnails),
       const DeepCollectionEquality().hash(uploadDate),
       const DeepCollectionEquality().hash(isLive),
       const DeepCollectionEquality().hash(channelId));
 
   @JsonKey(ignore: true)
   @override
-  _$SearchVideoCopyWith<_SearchVideo> get copyWith =>
-      __$SearchVideoCopyWithImpl<_SearchVideo>(this, _$identity);
+  _$$_SearchVideoCopyWith<_$_SearchVideo> get copyWith =>
+      __$$_SearchVideoCopyWithImpl<_$_SearchVideo>(this, _$identity);
 }
 
 abstract class _SearchVideo implements SearchVideo {
   const factory _SearchVideo(
-      VideoId id,
-      String title,
-      String author,
-      String description,
-      String duration,
-      int viewCount,
-      List<Thumbnail> thumbnails,
-      String? uploadDate,
-      bool isLive,
-      String channelId) = _$_SearchVideo;
+      final VideoId id,
+      final String title,
+      final String author,
+      final String description,
+      final String duration,
+      final int viewCount,
+      final List<Thumbnail> thumbnails,
+      final String? uploadDate,
+      final bool isLive,
+      final String channelId) = _$_SearchVideo;
 
   @override
 
@@ -427,6 +400,6 @@ abstract class _SearchVideo implements SearchVideo {
   String get channelId;
   @override
   @JsonKey(ignore: true)
-  _$SearchVideoCopyWith<_SearchVideo> get copyWith =>
+  _$$_SearchVideoCopyWith<_$_SearchVideo> get copyWith =>
       throw _privateConstructorUsedError;
 }

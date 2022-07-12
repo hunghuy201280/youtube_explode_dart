@@ -12,26 +12,7 @@ part of 'channel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ChannelTearOff {
-  const _$ChannelTearOff();
-
-  _Channel call(ChannelId id, String title, String logoUrl, String bannerUrl,
-      int? subscribersCount) {
-    return _Channel(
-      id,
-      title,
-      logoUrl,
-      bannerUrl,
-      subscribersCount,
-    );
-  }
-}
-
-/// @nodoc
-const $Channel = _$ChannelTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$Channel {
@@ -117,9 +98,10 @@ class _$ChannelCopyWithImpl<$Res> implements $ChannelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
-  factory _$ChannelCopyWith(_Channel value, $Res Function(_Channel) then) =
-      __$ChannelCopyWithImpl<$Res>;
+abstract class _$$_ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
+  factory _$$_ChannelCopyWith(
+          _$_Channel value, $Res Function(_$_Channel) then) =
+      __$$_ChannelCopyWithImpl<$Res>;
   @override
   $Res call(
       {ChannelId id,
@@ -133,13 +115,13 @@ abstract class _$ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$ChannelCopyWithImpl<$Res> extends _$ChannelCopyWithImpl<$Res>
-    implements _$ChannelCopyWith<$Res> {
-  __$ChannelCopyWithImpl(_Channel _value, $Res Function(_Channel) _then)
-      : super(_value, (v) => _then(v as _Channel));
+class __$$_ChannelCopyWithImpl<$Res> extends _$ChannelCopyWithImpl<$Res>
+    implements _$$_ChannelCopyWith<$Res> {
+  __$$_ChannelCopyWithImpl(_$_Channel _value, $Res Function(_$_Channel) _then)
+      : super(_value, (v) => _then(v as _$_Channel));
 
   @override
-  _Channel get _value => super._value as _Channel;
+  _$_Channel get _value => super._value as _$_Channel;
 
   @override
   $Res call({
@@ -149,7 +131,7 @@ class __$ChannelCopyWithImpl<$Res> extends _$ChannelCopyWithImpl<$Res>
     Object? bannerUrl = freezed,
     Object? subscribersCount = freezed,
   }) {
-    return _then(_Channel(
+    return _then(_$_Channel(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -181,25 +163,24 @@ class _$_Channel extends _Channel {
       this.id, this.title, this.logoUrl, this.bannerUrl, this.subscribersCount)
       : super._();
 
-  @override
-
   /// Channel ID.
-  final ChannelId id;
   @override
+  final ChannelId id;
 
   /// Channel title.
-  final String title;
   @override
+  final String title;
 
   /// URL of the channel's logo image.
-  final String logoUrl;
   @override
+  final String logoUrl;
 
   /// URL of the channel's banner image.
-  final String bannerUrl;
   @override
+  final String bannerUrl;
 
   /// The (approximate) channel subscriber's count.
+  @override
   final int? subscribersCount;
 
   @override
@@ -211,7 +192,7 @@ class _$_Channel extends _Channel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Channel &&
+            other is _$_Channel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.logoUrl, logoUrl) &&
@@ -231,13 +212,17 @@ class _$_Channel extends _Channel {
 
   @JsonKey(ignore: true)
   @override
-  _$ChannelCopyWith<_Channel> get copyWith =>
-      __$ChannelCopyWithImpl<_Channel>(this, _$identity);
+  _$$_ChannelCopyWith<_$_Channel> get copyWith =>
+      __$$_ChannelCopyWithImpl<_$_Channel>(this, _$identity);
 }
 
 abstract class _Channel extends Channel {
-  const factory _Channel(ChannelId id, String title, String logoUrl,
-      String bannerUrl, int? subscribersCount) = _$_Channel;
+  const factory _Channel(
+      final ChannelId id,
+      final String title,
+      final String logoUrl,
+      final String bannerUrl,
+      final int? subscribersCount) = _$_Channel;
   const _Channel._() : super._();
 
   @override
@@ -262,6 +247,6 @@ abstract class _Channel extends Channel {
   int? get subscribersCount;
   @override
   @JsonKey(ignore: true)
-  _$ChannelCopyWith<_Channel> get copyWith =>
+  _$$_ChannelCopyWith<_$_Channel> get copyWith =>
       throw _privateConstructorUsedError;
 }

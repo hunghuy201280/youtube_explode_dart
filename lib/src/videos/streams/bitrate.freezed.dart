@@ -12,29 +12,11 @@ part of 'bitrate.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Bitrate _$BitrateFromJson(Map<String, dynamic> json) {
   return _Bitrate.fromJson(json);
 }
-
-/// @nodoc
-class _$BitrateTearOff {
-  const _$BitrateTearOff();
-
-  _Bitrate call(int bitsPerSecond) {
-    return _Bitrate(
-      bitsPerSecond,
-    );
-  }
-
-  Bitrate fromJson(Map<String, Object?> json) {
-    return Bitrate.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Bitrate = _$BitrateTearOff();
 
 /// @nodoc
 mixin _$Bitrate {
@@ -75,27 +57,28 @@ class _$BitrateCopyWithImpl<$Res> implements $BitrateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BitrateCopyWith<$Res> implements $BitrateCopyWith<$Res> {
-  factory _$BitrateCopyWith(_Bitrate value, $Res Function(_Bitrate) then) =
-      __$BitrateCopyWithImpl<$Res>;
+abstract class _$$_BitrateCopyWith<$Res> implements $BitrateCopyWith<$Res> {
+  factory _$$_BitrateCopyWith(
+          _$_Bitrate value, $Res Function(_$_Bitrate) then) =
+      __$$_BitrateCopyWithImpl<$Res>;
   @override
   $Res call({int bitsPerSecond});
 }
 
 /// @nodoc
-class __$BitrateCopyWithImpl<$Res> extends _$BitrateCopyWithImpl<$Res>
-    implements _$BitrateCopyWith<$Res> {
-  __$BitrateCopyWithImpl(_Bitrate _value, $Res Function(_Bitrate) _then)
-      : super(_value, (v) => _then(v as _Bitrate));
+class __$$_BitrateCopyWithImpl<$Res> extends _$BitrateCopyWithImpl<$Res>
+    implements _$$_BitrateCopyWith<$Res> {
+  __$$_BitrateCopyWithImpl(_$_Bitrate _value, $Res Function(_$_Bitrate) _then)
+      : super(_value, (v) => _then(v as _$_Bitrate));
 
   @override
-  _Bitrate get _value => super._value as _Bitrate;
+  _$_Bitrate get _value => super._value as _$_Bitrate;
 
   @override
   $Res call({
     Object? bitsPerSecond = freezed,
   }) {
-    return _then(_Bitrate(
+    return _then(_$_Bitrate(
       bitsPerSecond == freezed
           ? _value.bitsPerSecond
           : bitsPerSecond // ignore: cast_nullable_to_non_nullable
@@ -112,28 +95,28 @@ class _$_Bitrate extends _Bitrate {
   factory _$_Bitrate.fromJson(Map<String, dynamic> json) =>
       _$$_BitrateFromJson(json);
 
-  @override
-
   /// Bits per second.
+  @override
   final int bitsPerSecond;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Bitrate &&
+            other is _$_Bitrate &&
             const DeepCollectionEquality()
                 .equals(other.bitsPerSecond, bitsPerSecond));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(bitsPerSecond));
 
   @JsonKey(ignore: true)
   @override
-  _$BitrateCopyWith<_Bitrate> get copyWith =>
-      __$BitrateCopyWithImpl<_Bitrate>(this, _$identity);
+  _$$_BitrateCopyWith<_$_Bitrate> get copyWith =>
+      __$$_BitrateCopyWithImpl<_$_Bitrate>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -142,7 +125,7 @@ class _$_Bitrate extends _Bitrate {
 }
 
 abstract class _Bitrate extends Bitrate {
-  const factory _Bitrate(int bitsPerSecond) = _$_Bitrate;
+  const factory _Bitrate(final int bitsPerSecond) = _$_Bitrate;
   const _Bitrate._() : super._();
 
   factory _Bitrate.fromJson(Map<String, dynamic> json) = _$_Bitrate.fromJson;
@@ -153,6 +136,6 @@ abstract class _Bitrate extends Bitrate {
   int get bitsPerSecond;
   @override
   @JsonKey(ignore: true)
-  _$BitrateCopyWith<_Bitrate> get copyWith =>
+  _$$_BitrateCopyWith<_$_Bitrate> get copyWith =>
       throw _privateConstructorUsedError;
 }

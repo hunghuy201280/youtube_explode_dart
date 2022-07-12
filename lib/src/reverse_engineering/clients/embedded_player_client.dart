@@ -120,7 +120,9 @@ class _StreamInfo extends StreamInfoProvider {
   @override
   late final String? videoCodec = isAudioOnly
       ? null
-      : codecs?.split(',').firstOrNull?.trim().nullIfWhitespace;
+      : codecs?.split(',').isNotEmpty == true
+          ? codecs?.split(',').first.trim().nullIfWhitespace
+          : null;
 
   @override
   late final int? videoHeight = root.getT<int>('height');
