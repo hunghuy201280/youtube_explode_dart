@@ -12,30 +12,11 @@ part of 'language.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Language _$LanguageFromJson(Map<String, dynamic> json) {
   return _Language.fromJson(json);
 }
-
-/// @nodoc
-class _$LanguageTearOff {
-  const _$LanguageTearOff();
-
-  _Language call(String code, String name) {
-    return _Language(
-      code,
-      name,
-    );
-  }
-
-  Language fromJson(Map<String, Object?> json) {
-    return Language.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Language = _$LanguageTearOff();
 
 /// @nodoc
 mixin _$Language {
@@ -85,28 +66,30 @@ class _$LanguageCopyWithImpl<$Res> implements $LanguageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LanguageCopyWith<$Res> implements $LanguageCopyWith<$Res> {
-  factory _$LanguageCopyWith(_Language value, $Res Function(_Language) then) =
-      __$LanguageCopyWithImpl<$Res>;
+abstract class _$$_LanguageCopyWith<$Res> implements $LanguageCopyWith<$Res> {
+  factory _$$_LanguageCopyWith(
+          _$_Language value, $Res Function(_$_Language) then) =
+      __$$_LanguageCopyWithImpl<$Res>;
   @override
   $Res call({String code, String name});
 }
 
 /// @nodoc
-class __$LanguageCopyWithImpl<$Res> extends _$LanguageCopyWithImpl<$Res>
-    implements _$LanguageCopyWith<$Res> {
-  __$LanguageCopyWithImpl(_Language _value, $Res Function(_Language) _then)
-      : super(_value, (v) => _then(v as _Language));
+class __$$_LanguageCopyWithImpl<$Res> extends _$LanguageCopyWithImpl<$Res>
+    implements _$$_LanguageCopyWith<$Res> {
+  __$$_LanguageCopyWithImpl(
+      _$_Language _value, $Res Function(_$_Language) _then)
+      : super(_value, (v) => _then(v as _$_Language));
 
   @override
-  _Language get _value => super._value as _Language;
+  _$_Language get _value => super._value as _$_Language;
 
   @override
   $Res call({
     Object? code = freezed,
     Object? name = freezed,
   }) {
-    return _then(_Language(
+    return _then(_$_Language(
       code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -127,13 +110,12 @@ class _$_Language extends _Language {
   factory _$_Language.fromJson(Map<String, dynamic> json) =>
       _$$_LanguageFromJson(json);
 
-  @override
-
   /// ISO 639-1 code of this language.
-  final String code;
   @override
+  final String code;
 
   /// Full English name of this language. This could be an empty string.
+  @override
   final String name;
 
   @override
@@ -145,11 +127,12 @@ class _$_Language extends _Language {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Language &&
+            other is _$_Language &&
             const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality().equals(other.name, name));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -158,8 +141,8 @@ class _$_Language extends _Language {
 
   @JsonKey(ignore: true)
   @override
-  _$LanguageCopyWith<_Language> get copyWith =>
-      __$LanguageCopyWithImpl<_Language>(this, _$identity);
+  _$$_LanguageCopyWith<_$_Language> get copyWith =>
+      __$$_LanguageCopyWithImpl<_$_Language>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -168,7 +151,7 @@ class _$_Language extends _Language {
 }
 
 abstract class _Language extends Language {
-  const factory _Language(String code, String name) = _$_Language;
+  const factory _Language(final String code, final String name) = _$_Language;
   const _Language._() : super._();
 
   factory _Language.fromJson(Map<String, dynamic> json) = _$_Language.fromJson;
@@ -183,6 +166,6 @@ abstract class _Language extends Language {
   String get name;
   @override
   @JsonKey(ignore: true)
-  _$LanguageCopyWith<_Language> get copyWith =>
+  _$$_LanguageCopyWith<_$_Language> get copyWith =>
       throw _privateConstructorUsedError;
 }

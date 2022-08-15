@@ -12,25 +12,7 @@ part of 'search_channel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SearchChannelTearOff {
-  const _$SearchChannelTearOff();
-
-  _SearchChannel call(
-      ChannelId id, String name, String description, int videoCount) {
-    return _SearchChannel(
-      id,
-      name,
-      description,
-      videoCount,
-    );
-  }
-}
-
-/// @nodoc
-const $SearchChannel = _$SearchChannelTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$SearchChannel {
@@ -107,11 +89,11 @@ class _$SearchChannelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SearchChannelCopyWith<$Res>
+abstract class _$$_SearchChannelCopyWith<$Res>
     implements $SearchChannelCopyWith<$Res> {
-  factory _$SearchChannelCopyWith(
-          _SearchChannel value, $Res Function(_SearchChannel) then) =
-      __$SearchChannelCopyWithImpl<$Res>;
+  factory _$$_SearchChannelCopyWith(
+          _$_SearchChannel value, $Res Function(_$_SearchChannel) then) =
+      __$$_SearchChannelCopyWithImpl<$Res>;
   @override
   $Res call({ChannelId id, String name, String description, int videoCount});
 
@@ -120,15 +102,15 @@ abstract class _$SearchChannelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchChannelCopyWithImpl<$Res>
+class __$$_SearchChannelCopyWithImpl<$Res>
     extends _$SearchChannelCopyWithImpl<$Res>
-    implements _$SearchChannelCopyWith<$Res> {
-  __$SearchChannelCopyWithImpl(
-      _SearchChannel _value, $Res Function(_SearchChannel) _then)
-      : super(_value, (v) => _then(v as _SearchChannel));
+    implements _$$_SearchChannelCopyWith<$Res> {
+  __$$_SearchChannelCopyWithImpl(
+      _$_SearchChannel _value, $Res Function(_$_SearchChannel) _then)
+      : super(_value, (v) => _then(v as _$_SearchChannel));
 
   @override
-  _SearchChannel get _value => super._value as _SearchChannel;
+  _$_SearchChannel get _value => super._value as _$_SearchChannel;
 
   @override
   $Res call({
@@ -137,7 +119,7 @@ class __$SearchChannelCopyWithImpl<$Res>
     Object? description = freezed,
     Object? videoCount = freezed,
   }) {
-    return _then(_SearchChannel(
+    return _then(_$_SearchChannel(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -163,22 +145,21 @@ class __$SearchChannelCopyWithImpl<$Res>
 class _$_SearchChannel implements _SearchChannel {
   const _$_SearchChannel(this.id, this.name, this.description, this.videoCount);
 
-  @override
-
   /// Channel id.
-  final ChannelId id;
   @override
+  final ChannelId id;
 
   /// Channel name.
-  final String name;
   @override
+  final String name;
 
   /// Description snippet.
   /// Can be empty.
-  final String description;
   @override
+  final String description;
 
   /// Channel uploaded videos.
+  @override
   final int videoCount;
 
   @override
@@ -190,7 +171,7 @@ class _$_SearchChannel implements _SearchChannel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SearchChannel &&
+            other is _$_SearchChannel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
@@ -209,14 +190,13 @@ class _$_SearchChannel implements _SearchChannel {
 
   @JsonKey(ignore: true)
   @override
-  _$SearchChannelCopyWith<_SearchChannel> get copyWith =>
-      __$SearchChannelCopyWithImpl<_SearchChannel>(this, _$identity);
+  _$$_SearchChannelCopyWith<_$_SearchChannel> get copyWith =>
+      __$$_SearchChannelCopyWithImpl<_$_SearchChannel>(this, _$identity);
 }
 
 abstract class _SearchChannel implements SearchChannel {
-  const factory _SearchChannel(
-          ChannelId id, String name, String description, int videoCount) =
-      _$_SearchChannel;
+  const factory _SearchChannel(final ChannelId id, final String name,
+      final String description, final int videoCount) = _$_SearchChannel;
 
   @override
 
@@ -237,6 +217,6 @@ abstract class _SearchChannel implements SearchChannel {
   int get videoCount;
   @override
   @JsonKey(ignore: true)
-  _$SearchChannelCopyWith<_SearchChannel> get copyWith =>
+  _$$_SearchChannelCopyWith<_$_SearchChannel> get copyWith =>
       throw _privateConstructorUsedError;
 }
