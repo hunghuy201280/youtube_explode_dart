@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'playlist.dart';
@@ -12,7 +11,28 @@ part of 'playlist.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$PlaylistTearOff {
+  const _$PlaylistTearOff();
+
+  _Playlist call(PlaylistId id, String title, String author, String description,
+      ThumbnailSet thumbnails, Engagement engagement, int? videoCount) {
+    return _Playlist(
+      id,
+      title,
+      author,
+      description,
+      thumbnails,
+      engagement,
+      videoCount,
+    );
+  }
+}
+
+/// @nodoc
+const $Playlist = _$PlaylistTearOff();
 
 /// @nodoc
 mixin _$Playlist {
@@ -135,10 +155,9 @@ class _$PlaylistCopyWithImpl<$Res> implements $PlaylistCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_PlaylistCopyWith<$Res> implements $PlaylistCopyWith<$Res> {
-  factory _$$_PlaylistCopyWith(
-          _$_Playlist value, $Res Function(_$_Playlist) then) =
-      __$$_PlaylistCopyWithImpl<$Res>;
+abstract class _$PlaylistCopyWith<$Res> implements $PlaylistCopyWith<$Res> {
+  factory _$PlaylistCopyWith(_Playlist value, $Res Function(_Playlist) then) =
+      __$PlaylistCopyWithImpl<$Res>;
   @override
   $Res call(
       {PlaylistId id,
@@ -158,14 +177,13 @@ abstract class _$$_PlaylistCopyWith<$Res> implements $PlaylistCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PlaylistCopyWithImpl<$Res> extends _$PlaylistCopyWithImpl<$Res>
-    implements _$$_PlaylistCopyWith<$Res> {
-  __$$_PlaylistCopyWithImpl(
-      _$_Playlist _value, $Res Function(_$_Playlist) _then)
-      : super(_value, (v) => _then(v as _$_Playlist));
+class __$PlaylistCopyWithImpl<$Res> extends _$PlaylistCopyWithImpl<$Res>
+    implements _$PlaylistCopyWith<$Res> {
+  __$PlaylistCopyWithImpl(_Playlist _value, $Res Function(_Playlist) _then)
+      : super(_value, (v) => _then(v as _Playlist));
 
   @override
-  _$_Playlist get _value => super._value as _$_Playlist;
+  _Playlist get _value => super._value as _Playlist;
 
   @override
   $Res call({
@@ -177,7 +195,7 @@ class __$$_PlaylistCopyWithImpl<$Res> extends _$PlaylistCopyWithImpl<$Res>
     Object? engagement = freezed,
     Object? videoCount = freezed,
   }) {
-    return _then(_$_Playlist(
+    return _then(_Playlist(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -217,34 +235,35 @@ class _$_Playlist extends _Playlist {
       this.thumbnails, this.engagement, this.videoCount)
       : super._();
 
-  /// Playlist ID.
   @override
+
+  /// Playlist ID.
   final PlaylistId id;
+  @override
 
   /// Playlist title.
-  @override
   final String title;
+  @override
 
   /// Playlist author.
   /// Can be null if it's a system playlist (e.g. Video Mix, Topics, etc.).
-  @override
   final String author;
+  @override
 
   /// Playlist description.
-  @override
   final String description;
+  @override
 
   /// Available thumbnails for this playlist.
   /// Can be null if the playlist is empty.
-  @override
   final ThumbnailSet thumbnails;
+  @override
 
   /// Engagement statistics.
-  @override
   final Engagement engagement;
+  @override
 
   /// Total videos in this playlist.
-  @override
   final int? videoCount;
 
   @override
@@ -256,7 +275,7 @@ class _$_Playlist extends _Playlist {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Playlist &&
+            other is _Playlist &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.author, author) &&
@@ -283,19 +302,19 @@ class _$_Playlist extends _Playlist {
 
   @JsonKey(ignore: true)
   @override
-  _$$_PlaylistCopyWith<_$_Playlist> get copyWith =>
-      __$$_PlaylistCopyWithImpl<_$_Playlist>(this, _$identity);
+  _$PlaylistCopyWith<_Playlist> get copyWith =>
+      __$PlaylistCopyWithImpl<_Playlist>(this, _$identity);
 }
 
 abstract class _Playlist extends Playlist {
   const factory _Playlist(
-      final PlaylistId id,
-      final String title,
-      final String author,
-      final String description,
-      final ThumbnailSet thumbnails,
-      final Engagement engagement,
-      final int? videoCount) = _$_Playlist;
+      PlaylistId id,
+      String title,
+      String author,
+      String description,
+      ThumbnailSet thumbnails,
+      Engagement engagement,
+      int? videoCount) = _$_Playlist;
   const _Playlist._() : super._();
 
   @override
@@ -330,6 +349,6 @@ abstract class _Playlist extends Playlist {
   int? get videoCount;
   @override
   @JsonKey(ignore: true)
-  _$$_PlaylistCopyWith<_$_Playlist> get copyWith =>
+  _$PlaylistCopyWith<_Playlist> get copyWith =>
       throw _privateConstructorUsedError;
 }

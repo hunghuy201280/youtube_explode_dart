@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'thumbnail_set.dart';
@@ -12,7 +11,21 @@ part of 'thumbnail_set.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$ThumbnailSetTearOff {
+  const _$ThumbnailSetTearOff();
+
+  _ThumbnailSet call(String videoId) {
+    return _ThumbnailSet(
+      videoId,
+    );
+  }
+}
+
+/// @nodoc
+const $ThumbnailSet = _$ThumbnailSetTearOff();
 
 /// @nodoc
 mixin _$ThumbnailSet {
@@ -54,31 +67,30 @@ class _$ThumbnailSetCopyWithImpl<$Res> implements $ThumbnailSetCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_ThumbnailSetCopyWith<$Res>
+abstract class _$ThumbnailSetCopyWith<$Res>
     implements $ThumbnailSetCopyWith<$Res> {
-  factory _$$_ThumbnailSetCopyWith(
-          _$_ThumbnailSet value, $Res Function(_$_ThumbnailSet) then) =
-      __$$_ThumbnailSetCopyWithImpl<$Res>;
+  factory _$ThumbnailSetCopyWith(
+          _ThumbnailSet value, $Res Function(_ThumbnailSet) then) =
+      __$ThumbnailSetCopyWithImpl<$Res>;
   @override
   $Res call({String videoId});
 }
 
 /// @nodoc
-class __$$_ThumbnailSetCopyWithImpl<$Res>
-    extends _$ThumbnailSetCopyWithImpl<$Res>
-    implements _$$_ThumbnailSetCopyWith<$Res> {
-  __$$_ThumbnailSetCopyWithImpl(
-      _$_ThumbnailSet _value, $Res Function(_$_ThumbnailSet) _then)
-      : super(_value, (v) => _then(v as _$_ThumbnailSet));
+class __$ThumbnailSetCopyWithImpl<$Res> extends _$ThumbnailSetCopyWithImpl<$Res>
+    implements _$ThumbnailSetCopyWith<$Res> {
+  __$ThumbnailSetCopyWithImpl(
+      _ThumbnailSet _value, $Res Function(_ThumbnailSet) _then)
+      : super(_value, (v) => _then(v as _ThumbnailSet));
 
   @override
-  _$_ThumbnailSet get _value => super._value as _$_ThumbnailSet;
+  _ThumbnailSet get _value => super._value as _ThumbnailSet;
 
   @override
   $Res call({
     Object? videoId = freezed,
   }) {
-    return _then(_$_ThumbnailSet(
+    return _then(_ThumbnailSet(
       videoId == freezed
           ? _value.videoId
           : videoId // ignore: cast_nullable_to_non_nullable
@@ -92,8 +104,9 @@ class __$$_ThumbnailSetCopyWithImpl<$Res>
 class _$_ThumbnailSet extends _ThumbnailSet {
   const _$_ThumbnailSet(this.videoId) : super._();
 
-  /// Video id.
   @override
+
+  /// Video id.
   final String videoId;
 
   @override
@@ -105,7 +118,7 @@ class _$_ThumbnailSet extends _ThumbnailSet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ThumbnailSet &&
+            other is _ThumbnailSet &&
             const DeepCollectionEquality().equals(other.videoId, videoId));
   }
 
@@ -115,12 +128,12 @@ class _$_ThumbnailSet extends _ThumbnailSet {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ThumbnailSetCopyWith<_$_ThumbnailSet> get copyWith =>
-      __$$_ThumbnailSetCopyWithImpl<_$_ThumbnailSet>(this, _$identity);
+  _$ThumbnailSetCopyWith<_ThumbnailSet> get copyWith =>
+      __$ThumbnailSetCopyWithImpl<_ThumbnailSet>(this, _$identity);
 }
 
 abstract class _ThumbnailSet extends ThumbnailSet {
-  const factory _ThumbnailSet(final String videoId) = _$_ThumbnailSet;
+  const factory _ThumbnailSet(String videoId) = _$_ThumbnailSet;
   const _ThumbnailSet._() : super._();
 
   @override
@@ -129,6 +142,6 @@ abstract class _ThumbnailSet extends ThumbnailSet {
   String get videoId;
   @override
   @JsonKey(ignore: true)
-  _$$_ThumbnailSetCopyWith<_$_ThumbnailSet> get copyWith =>
+  _$ThumbnailSetCopyWith<_ThumbnailSet> get copyWith =>
       throw _privateConstructorUsedError;
 }

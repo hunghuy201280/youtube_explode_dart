@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'channel_id.dart';
@@ -12,7 +11,21 @@ part of 'channel_id.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$ChannelIdTearOff {
+  const _$ChannelIdTearOff();
+
+  _ChannelId _internal(String value) {
+    return _ChannelId(
+      value,
+    );
+  }
+}
+
+/// @nodoc
+const $ChannelId = _$ChannelIdTearOff();
 
 /// @nodoc
 mixin _$ChannelId {
@@ -53,29 +66,28 @@ class _$ChannelIdCopyWithImpl<$Res> implements $ChannelIdCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_ChannelIdCopyWith<$Res> implements $ChannelIdCopyWith<$Res> {
-  factory _$$_ChannelIdCopyWith(
-          _$_ChannelId value, $Res Function(_$_ChannelId) then) =
-      __$$_ChannelIdCopyWithImpl<$Res>;
+abstract class _$ChannelIdCopyWith<$Res> implements $ChannelIdCopyWith<$Res> {
+  factory _$ChannelIdCopyWith(
+          _ChannelId value, $Res Function(_ChannelId) then) =
+      __$ChannelIdCopyWithImpl<$Res>;
   @override
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_ChannelIdCopyWithImpl<$Res> extends _$ChannelIdCopyWithImpl<$Res>
-    implements _$$_ChannelIdCopyWith<$Res> {
-  __$$_ChannelIdCopyWithImpl(
-      _$_ChannelId _value, $Res Function(_$_ChannelId) _then)
-      : super(_value, (v) => _then(v as _$_ChannelId));
+class __$ChannelIdCopyWithImpl<$Res> extends _$ChannelIdCopyWithImpl<$Res>
+    implements _$ChannelIdCopyWith<$Res> {
+  __$ChannelIdCopyWithImpl(_ChannelId _value, $Res Function(_ChannelId) _then)
+      : super(_value, (v) => _then(v as _ChannelId));
 
   @override
-  _$_ChannelId get _value => super._value as _$_ChannelId;
+  _ChannelId get _value => super._value as _ChannelId;
 
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_$_ChannelId(
+    return _then(_ChannelId(
       value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -89,15 +101,16 @@ class __$$_ChannelIdCopyWithImpl<$Res> extends _$ChannelIdCopyWithImpl<$Res>
 class _$_ChannelId extends _ChannelId {
   const _$_ChannelId(this.value) : super._();
 
-  /// ID as a string.
   @override
+
+  /// ID as a string.
   final String value;
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChannelId &&
+            other is _ChannelId &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -107,12 +120,12 @@ class _$_ChannelId extends _ChannelId {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ChannelIdCopyWith<_$_ChannelId> get copyWith =>
-      __$$_ChannelIdCopyWithImpl<_$_ChannelId>(this, _$identity);
+  _$ChannelIdCopyWith<_ChannelId> get copyWith =>
+      __$ChannelIdCopyWithImpl<_ChannelId>(this, _$identity);
 }
 
 abstract class _ChannelId extends ChannelId {
-  const factory _ChannelId(final String value) = _$_ChannelId;
+  const factory _ChannelId(String value) = _$_ChannelId;
   const _ChannelId._() : super._();
 
   @override
@@ -121,6 +134,6 @@ abstract class _ChannelId extends ChannelId {
   String get value;
   @override
   @JsonKey(ignore: true)
-  _$$_ChannelIdCopyWith<_$_ChannelId> get copyWith =>
+  _$ChannelIdCopyWith<_ChannelId> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'engagement.dart';
@@ -12,7 +11,23 @@ part of 'engagement.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$EngagementTearOff {
+  const _$EngagementTearOff();
+
+  _Engagement call(int viewCount, int? likeCount, int? dislikeCount) {
+    return _Engagement(
+      viewCount,
+      likeCount,
+      dislikeCount,
+    );
+  }
+}
+
+/// @nodoc
+const $Engagement = _$EngagementTearOff();
 
 /// @nodoc
 mixin _$Engagement {
@@ -70,24 +85,23 @@ class _$EngagementCopyWithImpl<$Res> implements $EngagementCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_EngagementCopyWith<$Res>
-    implements $EngagementCopyWith<$Res> {
-  factory _$$_EngagementCopyWith(
-          _$_Engagement value, $Res Function(_$_Engagement) then) =
-      __$$_EngagementCopyWithImpl<$Res>;
+abstract class _$EngagementCopyWith<$Res> implements $EngagementCopyWith<$Res> {
+  factory _$EngagementCopyWith(
+          _Engagement value, $Res Function(_Engagement) then) =
+      __$EngagementCopyWithImpl<$Res>;
   @override
   $Res call({int viewCount, int? likeCount, int? dislikeCount});
 }
 
 /// @nodoc
-class __$$_EngagementCopyWithImpl<$Res> extends _$EngagementCopyWithImpl<$Res>
-    implements _$$_EngagementCopyWith<$Res> {
-  __$$_EngagementCopyWithImpl(
-      _$_Engagement _value, $Res Function(_$_Engagement) _then)
-      : super(_value, (v) => _then(v as _$_Engagement));
+class __$EngagementCopyWithImpl<$Res> extends _$EngagementCopyWithImpl<$Res>
+    implements _$EngagementCopyWith<$Res> {
+  __$EngagementCopyWithImpl(
+      _Engagement _value, $Res Function(_Engagement) _then)
+      : super(_value, (v) => _then(v as _Engagement));
 
   @override
-  _$_Engagement get _value => super._value as _$_Engagement;
+  _Engagement get _value => super._value as _Engagement;
 
   @override
   $Res call({
@@ -95,7 +109,7 @@ class __$$_EngagementCopyWithImpl<$Res> extends _$EngagementCopyWithImpl<$Res>
     Object? likeCount = freezed,
     Object? dislikeCount = freezed,
   }) {
-    return _then(_$_Engagement(
+    return _then(_Engagement(
       viewCount == freezed
           ? _value.viewCount
           : viewCount // ignore: cast_nullable_to_non_nullable
@@ -118,16 +132,17 @@ class _$_Engagement extends _Engagement {
   const _$_Engagement(this.viewCount, this.likeCount, this.dislikeCount)
       : super._();
 
-  /// View count.
   @override
+
+  /// View count.
   final int viewCount;
+  @override
 
   /// Like count.
-  @override
   final int? likeCount;
+  @override
 
   /// Dislike count.
-  @override
   final int? dislikeCount;
 
   @override
@@ -139,7 +154,7 @@ class _$_Engagement extends _Engagement {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Engagement &&
+            other is _Engagement &&
             const DeepCollectionEquality().equals(other.viewCount, viewCount) &&
             const DeepCollectionEquality().equals(other.likeCount, likeCount) &&
             const DeepCollectionEquality()
@@ -155,13 +170,12 @@ class _$_Engagement extends _Engagement {
 
   @JsonKey(ignore: true)
   @override
-  _$$_EngagementCopyWith<_$_Engagement> get copyWith =>
-      __$$_EngagementCopyWithImpl<_$_Engagement>(this, _$identity);
+  _$EngagementCopyWith<_Engagement> get copyWith =>
+      __$EngagementCopyWithImpl<_Engagement>(this, _$identity);
 }
 
 abstract class _Engagement extends Engagement {
-  const factory _Engagement(
-          final int viewCount, final int? likeCount, final int? dislikeCount) =
+  const factory _Engagement(int viewCount, int? likeCount, int? dislikeCount) =
       _$_Engagement;
   const _Engagement._() : super._();
 
@@ -179,6 +193,6 @@ abstract class _Engagement extends Engagement {
   int? get dislikeCount;
   @override
   @JsonKey(ignore: true)
-  _$$_EngagementCopyWith<_$_Engagement> get copyWith =>
+  _$EngagementCopyWith<_Engagement> get copyWith =>
       throw _privateConstructorUsedError;
 }

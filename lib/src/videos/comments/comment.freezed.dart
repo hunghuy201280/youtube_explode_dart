@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'comment.dart';
@@ -12,7 +11,36 @@ part of 'comment.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$CommentTearOff {
+  const _$CommentTearOff();
+
+  _Comment call(
+      String author,
+      ChannelId channelId,
+      String text,
+      int likeCount,
+      String publishedTime,
+      int replyCount,
+      bool isHearted,
+      @internal String? continuation) {
+    return _Comment(
+      author,
+      channelId,
+      text,
+      likeCount,
+      publishedTime,
+      replyCount,
+      isHearted,
+      continuation,
+    );
+  }
+}
+
+/// @nodoc
+const $Comment = _$CommentTearOff();
 
 /// @nodoc
 mixin _$Comment {
@@ -128,10 +156,9 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
-  factory _$$_CommentCopyWith(
-          _$_Comment value, $Res Function(_$_Comment) then) =
-      __$$_CommentCopyWithImpl<$Res>;
+abstract class _$CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
+  factory _$CommentCopyWith(_Comment value, $Res Function(_Comment) then) =
+      __$CommentCopyWithImpl<$Res>;
   @override
   $Res call(
       {String author,
@@ -148,13 +175,13 @@ abstract class _$$_CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
-    implements _$$_CommentCopyWith<$Res> {
-  __$$_CommentCopyWithImpl(_$_Comment _value, $Res Function(_$_Comment) _then)
-      : super(_value, (v) => _then(v as _$_Comment));
+class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
+    implements _$CommentCopyWith<$Res> {
+  __$CommentCopyWithImpl(_Comment _value, $Res Function(_Comment) _then)
+      : super(_value, (v) => _then(v as _Comment));
 
   @override
-  _$_Comment get _value => super._value as _$_Comment;
+  _Comment get _value => super._value as _Comment;
 
   @override
   $Res call({
@@ -167,7 +194,7 @@ class __$$_CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
     Object? isHearted = freezed,
     Object? continuation = freezed,
   }) {
-    return _then(_$_Comment(
+    return _then(_Comment(
       author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -217,38 +244,39 @@ class _$_Comment implements _Comment {
       this.isHearted,
       @internal this.continuation);
 
-  /// Comment author name.
   @override
+
+  /// Comment author name.
   final String author;
+  @override
 
   /// Comment author channel id.
-  @override
   final ChannelId channelId;
+  @override
 
   /// Comment text.
-  @override
   final String text;
+  @override
 
   /// Comment likes count.
-  @override
   final int likeCount;
+  @override
 
   /// Published time as string. (For example: "2 years ago")
-  @override
   final String publishedTime;
+  @override
 
   /// Comment reply count.
-  @override
   final int replyCount;
+  @override
 
   /// True if the comment is hearted by the creator.
 //ignore: avoid_positional_boolean_parameters
-  @override
   final bool isHearted;
+  @override
 
   /// Used internally.
   /// Shouldn't be used in the code.
-  @override
   @internal
   final String? continuation;
 
@@ -261,7 +289,7 @@ class _$_Comment implements _Comment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Comment &&
+            other is _Comment &&
             const DeepCollectionEquality().equals(other.author, author) &&
             const DeepCollectionEquality().equals(other.channelId, channelId) &&
             const DeepCollectionEquality().equals(other.text, text) &&
@@ -289,20 +317,20 @@ class _$_Comment implements _Comment {
 
   @JsonKey(ignore: true)
   @override
-  _$$_CommentCopyWith<_$_Comment> get copyWith =>
-      __$$_CommentCopyWithImpl<_$_Comment>(this, _$identity);
+  _$CommentCopyWith<_Comment> get copyWith =>
+      __$CommentCopyWithImpl<_Comment>(this, _$identity);
 }
 
 abstract class _Comment implements Comment {
   const factory _Comment(
-      final String author,
-      final ChannelId channelId,
-      final String text,
-      final int likeCount,
-      final String publishedTime,
-      final int replyCount,
-      final bool isHearted,
-      @internal final String? continuation) = _$_Comment;
+      String author,
+      ChannelId channelId,
+      String text,
+      int likeCount,
+      String publishedTime,
+      int replyCount,
+      bool isHearted,
+      @internal String? continuation) = _$_Comment;
 
   @override
 
@@ -341,6 +369,6 @@ abstract class _Comment implements Comment {
   String? get continuation;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentCopyWith<_$_Comment> get copyWith =>
+  _$CommentCopyWith<_Comment> get copyWith =>
       throw _privateConstructorUsedError;
 }

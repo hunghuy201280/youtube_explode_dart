@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'video.dart';
@@ -12,7 +11,48 @@ part of 'video.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$VideoTearOff {
+  const _$VideoTearOff();
+
+  _Video _internal(
+      VideoId id,
+      String title,
+      String author,
+      ChannelId channelId,
+      DateTime? uploadDate,
+      String? uploadDateRaw,
+      DateTime? publishDate,
+      String description,
+      Duration? duration,
+      ThumbnailSet thumbnails,
+      UnmodifiableListView<String> keywords,
+      Engagement engagement,
+      bool isLive,
+      [@internal WatchPage? watchPage]) {
+    return _Video(
+      id,
+      title,
+      author,
+      channelId,
+      uploadDate,
+      uploadDateRaw,
+      publishDate,
+      description,
+      duration,
+      thumbnails,
+      keywords,
+      engagement,
+      isLive,
+      watchPage,
+    );
+  }
+}
+
+/// @nodoc
+const $Video = _$VideoTearOff();
 
 /// @nodoc
 mixin _$Video {
@@ -207,9 +247,9 @@ class _$VideoCopyWithImpl<$Res> implements $VideoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_VideoCopyWith<$Res> implements $VideoCopyWith<$Res> {
-  factory _$$_VideoCopyWith(_$_Video value, $Res Function(_$_Video) then) =
-      __$$_VideoCopyWithImpl<$Res>;
+abstract class _$VideoCopyWith<$Res> implements $VideoCopyWith<$Res> {
+  factory _$VideoCopyWith(_Video value, $Res Function(_Video) then) =
+      __$VideoCopyWithImpl<$Res>;
   @override
   $Res call(
       {VideoId id,
@@ -238,13 +278,13 @@ abstract class _$$_VideoCopyWith<$Res> implements $VideoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res>
-    implements _$$_VideoCopyWith<$Res> {
-  __$$_VideoCopyWithImpl(_$_Video _value, $Res Function(_$_Video) _then)
-      : super(_value, (v) => _then(v as _$_Video));
+class __$VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res>
+    implements _$VideoCopyWith<$Res> {
+  __$VideoCopyWithImpl(_Video _value, $Res Function(_Video) _then)
+      : super(_value, (v) => _then(v as _Video));
 
   @override
-  _$_Video get _value => super._value as _$_Video;
+  _Video get _value => super._value as _Video;
 
   @override
   $Res call({
@@ -263,7 +303,7 @@ class __$$_VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res>
     Object? isLive = freezed,
     Object? watchPage = freezed,
   }) {
-    return _then(_$_Video(
+    return _then(_Video(
       id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -344,62 +384,63 @@ class _$_Video extends _Video {
       [@internal this.watchPage])
       : super._();
 
-  /// Video ID.
   @override
+
+  /// Video ID.
   final VideoId id;
+  @override
 
   /// Video title.
-  @override
   final String title;
+  @override
 
   /// Video author.
-  @override
   final String author;
+  @override
 
   /// Video author Id.
-  @override
   final ChannelId channelId;
+  @override
 
   /// Video upload date.
   /// Note: For search queries it is calculated with:
   ///   DateTime.now() - how much time is was published.
-  @override
   final DateTime? uploadDate;
   @override
   final String? uploadDateRaw;
+  @override
 
   /// Video publish date.
-  @override
   final DateTime? publishDate;
+  @override
 
   /// Video description.
-  @override
   final String description;
+  @override
 
   /// Duration of the video.
-  @override
   final Duration? duration;
+  @override
 
   /// Available thumbnails for this video.
-  @override
   final ThumbnailSet thumbnails;
+  @override
 
   /// Search keywords used for this video.
-  @override
   final UnmodifiableListView<String> keywords;
+  @override
 
   /// Engagement statistics for this video.
-  @override
   final Engagement engagement;
+  @override
 
   /// Returns true if this is a live stream.
 //ignore: avoid_positional_boolean_parameters
-  @override
   final bool isLive;
+  @override
 
   /// Used internally.
   /// Shouldn't be used in the code.
-  @override
   @internal
   final WatchPage? watchPage;
 
@@ -412,7 +453,7 @@ class _$_Video extends _Video {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Video &&
+            other is _Video &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.author, author) &&
@@ -455,26 +496,26 @@ class _$_Video extends _Video {
 
   @JsonKey(ignore: true)
   @override
-  _$$_VideoCopyWith<_$_Video> get copyWith =>
-      __$$_VideoCopyWithImpl<_$_Video>(this, _$identity);
+  _$VideoCopyWith<_Video> get copyWith =>
+      __$VideoCopyWithImpl<_Video>(this, _$identity);
 }
 
 abstract class _Video extends Video {
   const factory _Video(
-      final VideoId id,
-      final String title,
-      final String author,
-      final ChannelId channelId,
-      final DateTime? uploadDate,
-      final String? uploadDateRaw,
-      final DateTime? publishDate,
-      final String description,
-      final Duration? duration,
-      final ThumbnailSet thumbnails,
-      final UnmodifiableListView<String> keywords,
-      final Engagement engagement,
-      final bool isLive,
-      [@internal final WatchPage? watchPage]) = _$_Video;
+      VideoId id,
+      String title,
+      String author,
+      ChannelId channelId,
+      DateTime? uploadDate,
+      String? uploadDateRaw,
+      DateTime? publishDate,
+      String description,
+      Duration? duration,
+      ThumbnailSet thumbnails,
+      UnmodifiableListView<String> keywords,
+      Engagement engagement,
+      bool isLive,
+      [@internal WatchPage? watchPage]) = _$_Video;
   const _Video._() : super._();
 
   @override
@@ -538,6 +579,5 @@ abstract class _Video extends Video {
   WatchPage? get watchPage;
   @override
   @JsonKey(ignore: true)
-  _$$_VideoCopyWith<_$_Video> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$VideoCopyWith<_Video> get copyWith => throw _privateConstructorUsedError;
 }

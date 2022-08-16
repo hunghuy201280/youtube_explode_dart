@@ -1,6 +1,5 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'username.dart';
@@ -12,7 +11,21 @@ part of 'username.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
+class _$UsernameTearOff {
+  const _$UsernameTearOff();
+
+  _Username _(String value) {
+    return _Username(
+      value,
+    );
+  }
+}
+
+/// @nodoc
+const $Username = _$UsernameTearOff();
 
 /// @nodoc
 mixin _$Username {
@@ -53,29 +66,27 @@ class _$UsernameCopyWithImpl<$Res> implements $UsernameCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$_UsernameCopyWith<$Res> implements $UsernameCopyWith<$Res> {
-  factory _$$_UsernameCopyWith(
-          _$_Username value, $Res Function(_$_Username) then) =
-      __$$_UsernameCopyWithImpl<$Res>;
+abstract class _$UsernameCopyWith<$Res> implements $UsernameCopyWith<$Res> {
+  factory _$UsernameCopyWith(_Username value, $Res Function(_Username) then) =
+      __$UsernameCopyWithImpl<$Res>;
   @override
   $Res call({String value});
 }
 
 /// @nodoc
-class __$$_UsernameCopyWithImpl<$Res> extends _$UsernameCopyWithImpl<$Res>
-    implements _$$_UsernameCopyWith<$Res> {
-  __$$_UsernameCopyWithImpl(
-      _$_Username _value, $Res Function(_$_Username) _then)
-      : super(_value, (v) => _then(v as _$_Username));
+class __$UsernameCopyWithImpl<$Res> extends _$UsernameCopyWithImpl<$Res>
+    implements _$UsernameCopyWith<$Res> {
+  __$UsernameCopyWithImpl(_Username _value, $Res Function(_Username) _then)
+      : super(_value, (v) => _then(v as _Username));
 
   @override
-  _$_Username get _value => super._value as _$_Username;
+  _Username get _value => super._value as _Username;
 
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_$_Username(
+    return _then(_Username(
       value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -89,8 +100,9 @@ class __$$_UsernameCopyWithImpl<$Res> extends _$UsernameCopyWithImpl<$Res>
 class _$_Username implements _Username {
   const _$_Username(this.value);
 
-  /// User name as string.
   @override
+
+  /// User name as string.
   final String value;
 
   @override
@@ -102,7 +114,7 @@ class _$_Username implements _Username {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Username &&
+            other is _Username &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -112,12 +124,12 @@ class _$_Username implements _Username {
 
   @JsonKey(ignore: true)
   @override
-  _$$_UsernameCopyWith<_$_Username> get copyWith =>
-      __$$_UsernameCopyWithImpl<_$_Username>(this, _$identity);
+  _$UsernameCopyWith<_Username> get copyWith =>
+      __$UsernameCopyWithImpl<_Username>(this, _$identity);
 }
 
 abstract class _Username implements Username {
-  const factory _Username(final String value) = _$_Username;
+  const factory _Username(String value) = _$_Username;
 
   @override
 
@@ -125,6 +137,6 @@ abstract class _Username implements Username {
   String get value;
   @override
   @JsonKey(ignore: true)
-  _$$_UsernameCopyWith<_$_Username> get copyWith =>
+  _$UsernameCopyWith<_Username> get copyWith =>
       throw _privateConstructorUsedError;
 }
