@@ -14,9 +14,11 @@ dependencies:
   http_parser: ^4.0.2
   json_annotation:
   meta: ^1.8.0
-  xml: ^6.2.2
+  xml:
 
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
   console: ^4.1.0
   build_runner: ^2.3.3
   freezed: ^2.3.2
