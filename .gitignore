@@ -16,3 +16,5 @@ doc/api/
 /local/
 
 .flutter-plugins-dependencies
+
+**/.fvm/*
